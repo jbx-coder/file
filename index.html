@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <title>南京刚粉垂钓比赛章程</title>
+</head>
+    <style>
+    </style>
+<body>
+    <div id="markdown-container"></div>
+
+    <script>
+        fetch('./file.md')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('markdown-container').innerHTML = marked.parse(text);
+            });
+    </script>
+</body>
+</html>
